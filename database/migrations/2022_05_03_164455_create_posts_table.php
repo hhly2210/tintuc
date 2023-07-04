@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('body');
 
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->foreignId('category_id')->constrained('category')->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
 
             $table->integer('views')->default(0);
             $table->boolean('approved')->default(true);

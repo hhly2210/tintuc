@@ -7,7 +7,6 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Database\Query\Builder;
 
 class PostsController extends Controller
 {

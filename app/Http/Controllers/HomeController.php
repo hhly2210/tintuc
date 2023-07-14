@@ -99,7 +99,7 @@ class HomeController extends Controller
             'post_category_home8' => $post_category_home8, // Bài viết danh mục 8
             'post_category_home9' => $post_category_home9, // Bài viết danh mục 9
             'outstanding_posts' => $outstanding_posts, // Bài viết nỗi bật
-            'categories' => $categories, 
+            'categories' => $category, 
             'category_home' => $category_home, 
             'tags' => $tags,
             'top_commnents' => $top_commnents, // Lấy ý kiến người đọc mới nhất

@@ -138,7 +138,10 @@ $categoryFooter  = Category::where('name','!=','Chưa phân loại')->withCount(
 										<span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu">
-										@if(auth()->user()->role->name !== 'user')
+										{{-- 1 = user, 2 = admin, 3 editer --}}
+										@if (auth()->user()->role_id !== 1)
+										{{-- @if(auth()->user()->hasRole('user')) --}}
+										{{-- @if(Auth::user()->hasRole('user')) --}}
 										<li>
 											<a href="{{ route('admin.index') }}">Admin - Dashbroad</a>
 										</li>

@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
             $role_id = $role->id;
         }
 
-
+        
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -55,7 +55,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role_id' => $role_id 
+            'role_id' => $role_id
         ]);
 
         event(new Registered($user));
